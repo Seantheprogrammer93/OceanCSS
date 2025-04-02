@@ -1,0 +1,93 @@
+/* ----- center a div ----- */
+.centerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ----- visibility section ----- */
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.collapse {
+  visibility: collapse;
+}
+
+/* ----- aspect ratio section ----- */
+.customAspectRatio {
+  aspect-ratio: var(--aspect-ratio);
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: var(--aspect-ratio-video);
+  /* 16 / 9 */
+}
+
+.aspect-auto {
+  aspect-ratio: auto;
+}
+
+/* ----- filter section ----- */
+.blur-xs {
+  filter: blur(var(--blur-xs));
+  /* 4px */
+}
+
+.blur-sm {
+  filter: blur(var(--blur-sm));
+  /* 8px */
+}
+
+.blur-md {
+  filter: blur(var(--blur-md));
+  /* 12px */
+}
+
+.blur-lg {
+  filter: blur(var(--blur-lg));
+  /* 16px */
+}
+
+.blur-xl {
+  filter: blur(var(--blur-xl));
+  /* 24px */
+}
+
+.blur-2xl {
+  filter: blur(var(--blur-2xl));
+  /* 40px */
+}
+
+.blur-3xl {
+  filter: blur(var(--blur-3xl));
+  /* 64px */
+}
+
+.blur-none {
+  filter: none;
+}
+
+.customBlur {
+  /* Use a custom property --blur-amount with a default of 0px */
+  filter: blur(var(--custom-blur-amount, 0px));
+}
+
+.invertColor {
+  filter: invert(100%);
+}
+
+.sm\:grid-cols-3 {
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
